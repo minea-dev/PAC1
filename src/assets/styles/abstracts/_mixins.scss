@@ -1,0 +1,27 @@
+@use "sass:map";
+@use "variables" as *;
+
+// Breakpoints
+$bp: (
+  xs: 360px,
+  sm: 480px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px
+);
+
+@mixin mq($key) {
+  @if map.has-key($bp, $key) {
+    $val: map.get($bp, $key);
+
+    @media (min-width: $val) { @content; }
+  } @else {
+    @error "Breakpoint `#{$key}` no existeix en $bp.";
+  }
+}
+
+// Container
+@mixin container {
+  width: min(#{$container-max}, 92%);
+  margin-inline: auto;
+}

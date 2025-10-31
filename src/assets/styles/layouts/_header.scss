@@ -1,0 +1,72 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/m" as m;
+
+/* ===== Header & Brand ===== */
+.site-header {
+  position: sticky; top: 0; z-index: $z-header;
+  backdrop-filter: blur(6px);
+  background: rgba($neutral-100, .9);
+  border-bottom: 1px solid $neutral-200;
+
+  &__bar {
+    @include m.container;
+
+    display: flex; align-items: center; justify-content: space-between;
+    padding: $space-4 0;
+  }
+
+  &__brand { display: flex; gap: $space-2; align-items: center; text-decoration: none; }
+  &__icon  { font-size: 1.8rem; color: $orange-700; margin-right: $space-2; transition: color .3s, transform .3s; }
+  &__brand:hover .site-header__icon { color: $orange-500; transform: rotate(-10deg) scale(1.1); }
+
+  &__title { font-weight: 700; color: $blue-900; font-size: 1.4rem; letter-spacing: .5px; }
+
+  &__toggle {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 40px; height: 40px; border: 0; border-radius: 10px;
+    background: rgba($orange-500, .1); color: $orange-700; cursor: pointer;
+    transition: background .2s, transform .2s;
+    &:hover { background: rgba($orange-500, .18); }
+    &:active { transform: scale(.98); }
+  }
+
+  @include m.mq(md) { &__toggle { display: none; } }
+}
+
+/* ===== Nav mobil/desktop ===== */
+.site-nav[hidden] { display: none; }
+
+.site-nav {
+  position: fixed; top: 64px; left: 0; right: 0; z-index: $z-header;
+  background: $neutral-100; border-bottom: 1px solid $neutral-200;
+  opacity: 0; visibility: hidden; transform: translateY(-10px);
+  transition: opacity .22s, transform .22s, visibility 0s linear .22s;
+  box-shadow: 0 12px 22px rgba(0, 0, 0, .06);
+
+  &__list { display: grid; gap: $space-2; padding: $space-4; margin: 0; list-style: none; }
+
+  &__link {
+    position: relative; display: block; padding: $space-3 $space-4; border-radius: 12px;
+    color: $blue-900; text-decoration: none; transition: color .3s, background .3s;
+
+    &::after {
+      content: ""; position: absolute; left: 0; bottom: 0; width: 0%; height: 2px;
+      background: $orange-700; transition: width .3s; border-radius: 2px;
+    }
+    &:hover { background: rgba($orange-500, .08); color: $orange-700; &::after { width: 100%; } }
+  }
+
+  &.is-open { opacity: 1; visibility: visible; transform: translateY(0); transition: opacity .22s, transform .22s, visibility 0s; }
+}
+
+@include m.mq(md) {
+  .site-nav {
+    position: static; z-index: auto; opacity: 1; visibility: visible; transform: none;
+    box-shadow: none; border-bottom: 0; background: transparent; transition: none;
+    &[hidden] { display: block; }
+    &__list { display: flex; gap: $space-3; padding: 0; }
+    &__link { padding: $space-2 $space-3; }
+  }
+}
+
+body.menu-open { overflow: hidden; }

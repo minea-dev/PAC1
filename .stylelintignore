@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "lint:css": "stylelint \"src/**/*.scss\"",
+    "lint:css:fix": "stylelint \"src/**/*.scss\" --fix"
+  }
+}

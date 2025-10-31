@@ -1,0 +1,12 @@
+@use "sass:math";
+
+@function rem($px, $base: 16) {
+  @return math.div($px, $base) * 1rem;
+}
+
+@function fluid($min, $max, $minVW: 360, $maxVW: 1280) {
+  @return clamp(#{$min},
+  calc(#{$min} + (#{$max} - #{$min}) * ((100vw - #{$minVW}px) / (#{$maxVW} - #{$minVW}))),
+  #{$max}
+  );
+}

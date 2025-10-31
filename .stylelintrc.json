@@ -1,0 +1,27 @@
+{
+  "extends": ["stylelint-config-standard-scss"],
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "selector-class-pattern": [
+      "^[a-z]+(?:-[a-z]+)*(?:__(?:[a-z]+(?:-[a-z]+)*))?(?:--(?:[a-z]+(?:-[a-z]+)*))?$",
+      { "message": "Classes BEM: bloc__element--modificador (kebab-case)." }
+    ],
+    "max-nesting-depth": 3,
+    "declaration-no-important": true,
+    "property-no-vendor-prefix": true,
+    "value-no-vendor-prefix": true,
+
+    "color-function-notation": "legacy",
+    "alpha-value-notation": "number",
+    "color-function-alias-notation": null,
+
+    "order/properties-order": null,
+    "scss/dollar-variable-empty-line-before": null,
+    "scss/dollar-variable-pattern": null,
+
+    "declaration-block-single-line-max-declarations": null
+  },
+  "overrides": [
+    { "files": ["**/*.scss"], "customSyntax": "postcss-scss" }
+  ]
+}

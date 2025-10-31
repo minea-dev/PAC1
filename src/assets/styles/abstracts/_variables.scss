@@ -1,0 +1,37 @@
+// Blue–Orange palette
+$color-bg: #f6eee6;
+$color-text: #111827;
+
+$blue-900: #0a3a6b;
+$blue-700: #155ca6;
+$blue-500: #1f78d1;
+
+$orange-900: #a83e00;
+$orange-700: #d65a00;
+$orange-500: #ff7a1a;
+$orange-300: #ffb077;
+
+$neutral-100: #fff;
+$neutral-200: #f3f4f6;
+$neutral-800: #1f2937;
+
+// Typography and base sizes
+$font-sans: system-ui, -apple-system, blinkmacsystemfont, roboto, "helvetica neue", arial, sans-serif;
+$fs-100: 0.95rem;
+$fs-200: 1.05rem;
+$fs-300: 1.25rem;
+$fs-400: 1.5rem;
+$fs-700: 2.4rem;
+$fs-900: 6rem;
+
+// Spacing, radii, shadows
+$space-2: .5rem; $space-3: .75rem; $space-4: 1rem; $space-6: 1.5rem; $space-8: 2rem; $space-12: 3rem; $space-16: 4rem;
+$radius-lg: 14px; $radius-xl: 22px;
+$shadow-soft: 0 10px 30px rgba(17, 24, 39, .12);
+
+// Layout
+$container-max: 1120px;
+$z-header: 1000;
+
+// Hero gradient
+$grad-hero: linear-gradient(135deg, #ffd29b 0%, #ffb077 40%, #ff9c66 100%);

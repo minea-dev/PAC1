@@ -1,0 +1,16 @@
+@use "../abstracts/variables" as *;
+
+.site-footer {
+  border-top: 1px solid $neutral-200;
+  padding: $space-8 0;
+  background: $neutral-100;
+  padding-left: $space-8; // margen interno a la izquierda
+}
+
+.footer-nav__list {
+  list-style: none; padding: 0; margin: 0 0 $space-3;
+  display: flex; gap: $space-3; flex-wrap: wrap;
+}
+
+.footer-nav__link { text-decoration: none; color: $blue-700; &:hover { color: $orange-700; } }
+.site-footer__copy { color: $neutral-800; }

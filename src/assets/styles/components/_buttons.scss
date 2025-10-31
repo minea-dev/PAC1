@@ -1,0 +1,12 @@
+@use "../abstracts/variables" as *;
+
+.btn {
+  display: inline-flex; align-items: center; gap: .5rem;
+  border: 0; border-radius: $radius-lg; padding: .6rem 1.1rem;
+  font-weight: 700; cursor: pointer; text-decoration: none;
+}
+
+.btn--primary {
+  background: $orange-700; color: #fff;
+  &:hover { background: $orange-500; }
+}

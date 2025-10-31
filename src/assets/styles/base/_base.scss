@@ -1,0 +1,12 @@
+@use "../abstracts/variables" as *;
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body { margin: 0; background: $color-bg; color: $color-text; font-family: $font-sans; line-height: 1.5; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: underline; text-underline-offset: .15em; }
+
+.skip-link {
+  position: absolute; left: -9999px;
+  &:focus { left: 1rem; top: 1rem; background: #fff; padding: .5rem .75rem; border-radius: 8px; }
+}
