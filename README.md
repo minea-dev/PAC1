@@ -25,7 +25,7 @@ Gestionar el projecte amb Git i GitHub.
 Publicar el lloc amb Netlify, utilitzant el build automatitzat de Parcel.
 
 ⚙️ Estructura del projecte
-📁 src/
+```bash📁 src/
 ├── 📁 html/
 │ ├── header.html
 │ ├── home.html
@@ -41,7 +41,7 @@ Publicar el lloc amb Netlify, utilitzant el build automatitzat de Parcel.
 │ └── footer-year.js
 ├── 📁 images/
 └── index.html
-
+```
 
 L’estructura segueix el model de UOC Boilerplate, amb separació clara de continguts, estils i funcionalitat.
 
