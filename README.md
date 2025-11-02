@@ -26,21 +26,21 @@ Publicar el lloc amb Netlify, utilitzant el build automatitzat de Parcel.
 
 ⚙️ Estructura del projecte
 📁 src/
- ├── 📁 html/
- │   ├── header.html
- │   ├── home.html
- │   └── footer.html
- ├── 📁 scss/
- │   ├── base/
- │   ├── components/
- │   ├── layout/
- │   ├── utils/
- │   └── main.scss
- ├── 📁 js/
- │   ├── menu.js
- │   └── footer-year.js
- ├── 📁 images/
- └── index.html
+├── 📁 html/
+│ ├── header.html
+│ ├── home.html
+│ └── footer.html
+├── 📁 scss/
+│ ├── base/
+│ ├── components/
+│ ├── layout/
+│ ├── utils/
+│ └── main.scss
+├── 📁 js/
+│ ├── menu.js
+│ └── footer-year.js
+├── 📁 images/
+└── index.html
 
 
 L’estructura segueix el model de UOC Boilerplate, amb separació clara de continguts, estils i funcionalitat.
