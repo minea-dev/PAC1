@@ -1,67 +1,85 @@
-# UOC Boilerplate
+# 🌞 Web sobre València
+Projecte final de l’assignatura Eines HTML i CSS II  UOC
 
-UOC Boilerplate is a starter template for the HTML and CSS Tools courses from the [Master's Program in Multimedia Applications](https://estudis.uoc.edu/ca/masters-universitaris/aplicacions-multimedia/presentacio) and the [Master's Program in Web App and Website Development](https://estudis.uoc.edu/ca/masters-universitaris/desenvolupament-llocs-aplicacions-web/presentacio) at the [Universitat Oberta de Catalunya](https://www.uoc.edu). It aims to provide a basic, modern frontend web development starter pack based on Parcel and including a Sass compiler, an ES6 transpiler, minifiers, an image transformer, and development tools.
+Autora: Minea Licer Silvestre
 
-This is the 3.x version of UOC Boilerplate, available since the UOC 2020-2 semester.
+## 🏙️ Descripció del projecte
 
-## Requirements
+Aquest projecte consisteix en la creació d’una landing page sobre la ciutat de València, dissenyada i desenvolupada amb un enfocament semàntic, accessible i responsive.
+L’objectiu és aplicar els coneixements adquirits al llarg de l’assignatura, utilitzant un workflow modern de desenvolupament front-end i bones pràctiques de codi.
 
-[Node.js](http://nodejs.org/) >= 18.x
+El lloc web presenta els principals atractius de la ciutat, amb una estructura modular i un estil coherent amb la seua identitat mediterrània.
 
-## Getting started
+## 🧩 Objectius principals
 
-Clone this repository with `git clone`, or download a .zip file using the top right green button.
+Aplicar HTML5 semàntic per estructurar correctament la informació.
 
-Using the Terminal, navigate to the project folder and run `npm install`.
+Utilitzar SCSS modular i la metodologia BEM per mantenir un codi net i escalable.
 
-## Features
+Desenvolupar una maquetació responsive seguint l’enfocament Mobile First.
 
-- Uses [Parcel v2](https://parceljs.org) module bundler.
-- NPM scripts for fast development and production build (see Commands below).
+Implementar bones pràctiques d’accessibilitat (a11y).
 
-### Stylesheets
+Gestionar el projecte amb Git i GitHub.
 
-- [Sass/SCSS](https://sass-lang.com) to CSS compilation (`@parcel/transformer-sass`).
-- Transpilation of modern CSS synthax to support older bvrowsers, based on `browserslist`, including vendor prefixing and synthax lowering, with [PostCSS](https://postcss.org/) (`@parcel/transformer-postcss`).
-- Minification and optimization of CSS files on production builds with [`lightningcss`](https://github.com/parcel-bundler/lightningcss) (`@parcel/optimizer-css`).
+Publicar el lloc amb Netlify, utilitzant el build automatitzat de Parcel.
 
-### HTML
+⚙️ Estructura del projecte
+📁 src/
+ ├── 📁 html/
+ │   ├── header.html
+ │   ├── home.html
+ │   └── footer.html
+ ├── 📁 scss/
+ │   ├── base/
+ │   ├── components/
+ │   ├── layout/
+ │   ├── utils/
+ │   └── main.scss
+ ├── 📁 js/
+ │   ├── menu.js
+ │   └── footer-year.js
+ ├── 📁 images/
+ └── index.html
 
-- Minification and optimization of CSS files on production builds [`htmlnano`](https://github.com/posthtml/htmlnano) (`@parcel/optimizer-htmlnano`).
-- [PostHTML](https://github.com/posthtml/posthtml) (`@parcel/transformer-posthtml`) features:
-  - Include partial HTML files with [`posthtml-include`](https://github.com/posthtml/posthtml-include).
 
-### Scripts
+L’estructura segueix el model de UOC Boilerplate, amb separació clara de continguts, estils i funcionalitat.
 
-- Transpilation of modern JavaScript synthax to support older browsers, based on `browserslist`, with with [Babel](https://babeljs.io/) (`@parcel/transformer-babel`).
-- Minification and optimization of JS code with [SWC](https://swc.rs/) (`@parcel/optimizer-swc`).
+## 🎨 Guia d’estil
 
-### Images
+Colors: gamma mediterrània, amb contrast suficient i tons blaus i terrosos.
 
-- Image transformation with [`sharp`](https://sharp.pixelplumbing.com/) ([`@parcel/transformer-image`](https://parceljs.org/recipes/image/)).
+Tipografies: jerarquia visual clara (títols, subtítols i cos de text).
 
-### Development
+Metodologia: BEM per a la nomenclatura de classes (.bloc__element--modificador).
 
-- Development server launch and live reloading on file changes.
-- Friendly error reporting.
+SCSS: ús de variables, mixins i partials per modularitzar el codi.
 
-## How to use this boilerplate
+## 📱 Maquetació responsive
 
-Content lives inside the `src/` folder. If you do not want to change the configuration or are unsure about what you are doing, do not edit files outside the `src/` folder.
+Enfocament Mobile First, començant per pantalles menudes.
 
-Always run the following commands during the development stage and for production builds. Please note that it is expected that all projects built with this boilerplate are compiled using `npm run build` before they are published.
+Adaptacions progressives mitjançant media queries.
 
-### Commands
+Ús de Flexbox i Grid per crear disposicions adaptables.
 
-| Command         | Description                                                                                                                                                                                                                                                                                                                                                         |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `npm run dev`   | Runs a local web server for development and opens the browser to display it. Automatically compiles styles and scripts whenever a file in `src/` is changed, and live reloads the browser. This is what _must be run_ on the development stage.                                                                                                                     |
-| `npm run build` | Compiles and minifies and optimizes the files in the assets folder. The generated compiled and optimized files are located in the `dist/` folder. This is what _must be run_ before publishing the project. This is also the build command to be run by external deployment services such as Netlify. The publishable files are then located in the `dist/` folder. |
-| `npm run clean` | Deletes the current `/dist` folder and cache folders.                                                                                                                                                                                                                                                                                                               |
-| `npm run test`  | Displays a success message if everything is working as expected.                                                                                                                                                                                                                                                                                                    |
+Verificació en diferents dispositius i navegadors.
 
-## Need help? / Want to help out?
+## 💡 Funcionalitat i interacció
 
-Feel free to create a [new issue](https://github.com/uoc-advanced-html-css/uoc-boilerplate/issues/new/) or drop me a line at jorditarrida@uoc.edu.
+Menú responsive amb control d’accessibilitat (aria-expanded, hidden).
 
-Are you using this Boilerplate for your projects or for educational purposes? I would love to hear about it!
+Any automàtic al peu de pàgina via JavaScript.
+
+Validacions de formulari i comportament general modularitzat amb type="module".
+
+## 🧭 Publicació i control de versions
+
+Git: inicialització, commits i pujades a GitHub.
+
+Netlify: desplegament amb build automatitzat npm-run-all clean parcel:build.
+
+Verificació de funcionament i de la correcta adaptació responsive.
+
+📍 Enllaç al lloc publicat:
+👉 [https://valencia-landing.netlify.app](https://pac1-minealicer.netlify.app/)
