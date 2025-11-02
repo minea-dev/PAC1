@@ -25,22 +25,29 @@ Gestionar el projecte amb Git i GitHub.
 Publicar el lloc amb Netlify, utilitzant el build automatitzat de Parcel.
 
 ⚙️ Estructura del projecte
-```bash📁 src/
-├── 📁 html/
-│ ├── header.html
-│ ├── home.html
-│ └── footer.html
-├── 📁 scss/
-│ ├── base/
-│ ├── components/
-│ ├── layout/
-│ ├── utils/
-│ └── main.scss
-├── 📁 js/
-│ ├── menu.js
-│ └── footer-year.js
-├── 📁 images/
-└── index.html
+```bash📁
+📁 src/
+ ├── 📁 assets/
+ │   ├── 📁 fonts/
+ │   ├── 📁 images/
+ │   ├── 📁 scripts/
+ │   └── 📁 styles/
+ │       ├── 📁 abstracts/
+ │       │   ├── _functions.scss
+ │       │   ├── _m.scss
+ │       │   ├── _mixins.scss
+ │       │   └── _variables.scss
+ │       ├── 📁 base/
+ │       │   └── _base.scss
+ │       ├── 📁 components/
+ │       │   └── _buttons.scss
+ │       ├── 📁 layouts/
+ │       └── main.scss
+ ├── 📁 views/
+ │   ├── footer.html
+ │   ├── header.html
+ │   └── home.html
+ └── index.html
 ```
 
 L’estructura segueix el model de UOC Boilerplate, amb separació clara de continguts, estils i funcionalitat.
@@ -65,13 +72,6 @@ Adaptacions progressives mitjançant media queries.
 
 Verificació en diferents dispositius i navegadors.
 
-## 💡 Funcionalitat i interacció
-
-Menú responsive amb control d’accessibilitat (aria-expanded, hidden).
-
-Any automàtic al peu de pàgina via JavaScript.
-
-Validacions de formulari i comportament general modularitzat amb type="module".
 
 ## 🧭 Publicació i control de versions
 
