@@ -82,4 +82,4 @@ Netlify: desplegament amb build automatitzat npm-run-all clean parcel:build.
 Verificació de funcionament i de la correcta adaptació responsive.
 
 📍 Enllaç al lloc publicat:
-👉 [https://valencia-landing.netlify.app](https://pac1-minealicer.netlify.app/)
+👉 [https://pac1-minealicer.netlify.app](https://pac1-minealicer.netlify.app/)
